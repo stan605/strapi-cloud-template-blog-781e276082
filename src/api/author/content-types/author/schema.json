@@ -13,13 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 100,
+      "required": true
     },
     "avatar": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
     },
     "email": {
       "type": "string"
@@ -29,6 +35,32 @@
       "relation": "oneToMany",
       "target": "api::article.article",
       "mappedBy": "author"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "jobTitle": {
+      "type": "string",
+      "maxLength": 150
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "credentials": {
+      "type": "string"
+    },
+    "expertise": {
+      "type": "text"
     }
   }
 }

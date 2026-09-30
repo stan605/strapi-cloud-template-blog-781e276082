@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviewers",
+  "info": {
+    "singularName": "reviewer",
+    "pluralName": "reviewers",
+    "displayName": "Reviewer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 50,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "title": {
+      "type": "string"
+    },
+    "credentials": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -17,7 +17,7 @@
     },
     "description": {
       "type": "text",
-      "maxLength": 80
+      "maxLength": 200
     },
     "slug": {
       "type": "uid",
@@ -27,7 +27,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
     },
     "author": {
       "type": "relation",
@@ -43,7 +47,41 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider"
+      ]
+    },
+    "reviewer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reviewer.reviewer"
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "noIndex": {
+      "type": "boolean"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "sortOrder": {
+      "type": "integer"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "tags"
     }
   }
 }
