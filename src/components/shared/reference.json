@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_references",
+  "info": {
+    "displayName": "Reference"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "authors": {
+      "type": "string"
+    },
+    "publication": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "volume": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "string"
+    },
+    "doi": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "accessedAt": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}

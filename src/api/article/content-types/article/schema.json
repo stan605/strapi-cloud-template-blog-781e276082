@@ -82,6 +82,11 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "mappedBy": "tags"
+    },
+    "references": {
+      "type": "component",
+      "component": "shared.reference",
+      "repeatable": true
     }
   }
 }
