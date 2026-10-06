@@ -509,6 +509,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     metaDescription: Schema.Attribute.Text;
     noIndex: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
+    references: Schema.Attribute.Component<'shared.reference', true>;
     reviewer: Schema.Attribute.Relation<'oneToOne', 'api::reviewer.reviewer'>;
     seoTitle: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'title'>;
